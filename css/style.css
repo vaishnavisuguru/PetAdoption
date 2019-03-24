@@ -1,0 +1,28 @@
+html
+{
+  background-image: url(../images/pet1.jpg);
+  height: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+h1 {
+  color: black;
+  font-size: 250%;
+}
+
+blockquote {
+   width: 30%;
+    background: #eee;
+    border-radius: 5px;
+    font-style: italic;
+    font-size: 120%;
+}
+
+blockquote p {
+    padding: 15px;
+}
+
+cite{
+  right: 50px;
+}
