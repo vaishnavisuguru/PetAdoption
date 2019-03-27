@@ -2,16 +2,92 @@ html
 {
   background-image: url(../images/pet1.jpg);
   height: 100%;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-h1 {
-  color: black;
-  font-size: 250%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
-blockquote {
+/* ====================================
+No scrolling of webpage
+==================================== */
+body {
+  width: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+
+/* Heading https://envato.com/blog/css3-typography-code-snippets/ */
+
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Cardo:400italic);
+
+.sandbox-correct-pronounciation {
+  padding: 10em 0 10em 0;
+}
+
+.heading-correct-pronounciation {
+
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+
+h1 {
+  color: #fff;
+  font-family: 'Cardo', serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  line-height: 2.2em;
+  top: -60px;
+
+}
+
+em {
+  font-family: 'EB Garamond', serif;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  font-style:normal;
+  padding-top: 0.1em;
+  text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+
+  &::before, &::after {
+  content: "§";
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+    opacity: 0.2;
+  margin: 0 0.6em;
+  font-size: 0.5em;
+
+
+}
+
+}
+
+.bottom {
+  font-size: 1.5em;
+  letter-spacing: 0.07em;
+  font-size: 1em;
+  display: block;
+}
+
+/* End of Heading Part */
+
+ blockquote {
+  position: relative;
+  top: -650px;
    width: 30%;
     background: #eee;
     border-radius: 5px;
@@ -21,8 +97,249 @@ blockquote {
 
 blockquote p {
     padding: 15px;
+    position: relative;
+
 }
 
-cite{
-  right: 50px;
+
+
+a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-size: 15px;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  text-align: left;
+}
+
+li {
+  float: left;
+}
+
+/* clear'n floats */
+ul:after {
+  clear: both;
+}
+
+ul:before,
+ul:after {
+    content: " ";
+    display: table;
+}
+
+nav.one {
+  position: relative;
+  background: #2B2B2B;
+  background-image: -webkit-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  background-image: -moz-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  background-image: -o-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  background-image: linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #0E0E0E;
+  -webkit-box-shadow: 2px 2px 3px #888;
+  -moz-box-shadow: 2px 2px 3px #888;
+  box-shadow: 2px 2px 3px #888;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  top: -20px;
+}
+
+
+/* prime */
+ul.primary li a {
+  display: block;
+  padding: 23px 33px;
+  border-right: 1px solid #3D3D3D
+  margin: 0;
+  overflow: hidden;
+  right: 200px;
+  letter-spacing: 2px;
+  font-style: italic;
+
+}
+
+ul.primary li:last-child a {
+  border-right: none;
+  right: 200px;
+}
+
+ul.primary li a:hover {
+
+  color: #000;
+  right: 200px;
+}
+
+/* subs */
+ul.sub {
+  position: absolute;
+  z-index: 200;
+  box-shadow: 2px 2px 0 #BEBEBE;
+  display:none;
+}
+
+ul.sub li {
+  float: none;
+  margin: 0;
+}
+
+ul.sub li a {
+  border-bottom: 1px dotted #ccc;
+  border-right: none;
+  color: #000;
+  padding: 15px 30px;
+}
+
+ul.sid li a
+{
+  font-style: italic;
+  background: #F3904F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3B4371, #F3904F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3B4371, #F3904F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+
+
+ul.sub li:last-child a {
+  border-bottom: none;
+}
+
+ul.sub li a:hover {
+  color: #000;
+  background: #eeeeee;
+}
+
+/* sub display*/
+ul.primary li:hover ul {
+  display: block;
+  background: #fff;
+  right: 200px;
+}
+
+/* keeps the tab background white */
+ul.primary li:hover a {
+  background: #fff;
+  color: #666;
+  text-shadow: none;
+  right: 1000px;
+}
+
+ul.primary li:hover > a{
+  color: #000;
+  right: 1000px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* .decor {
+    padding: 3px;
+  } */
+
+  .wrap {
+    margin-top: 0px;
+  }
+
+   li {
+    float: none;
+  }
+
+  ul.primary li:hover a {
+    background: none;
+    color: #8B8B8B;
+    text-shadow: 1px 1px #000;
+    right: 1000px;
+  }
+
+  ul.primary li:hover ul {
+    display: block;
+    background: #272727;
+    color: #fff;
+    right: 1000px;
+  }
+
+  ul.sub {
+    display: block;
+    position: static;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  ul.sub li a {
+    background: #272727;
+    border: none;
+    color: #8B8B8B;
+  }
+
+  ul.sub li a:hover {
+    color: #ccc;
+    background: none;
+  }
+
+
+
+
+
+
+  }
+
+
+
+  ul.secondary li a {
+    display: block;
+    padding: 23px 33px;
+    border-right: 1px solid #3D3D3D
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    right: -350px;
+    font-size: 20px;
+    font-family: 'Cardo', serif;
+    letter-spacing: 0.1em;
+    font-style: italic;
+  }
+
+  ul.secondary li:last-child a {
+    border-right: none;
+  }
+
+  ul.secondary li a:hover {
+
+    color: #000;
+  }
+
+  ul.secondary li:hover ul {
+    display: block;
+    background: #fff;
+  }
+
+  /* keeps the tab background white */
+  ul.secondary li:hover a {
+    background: #fff;
+    color: #666;
+    text-shadow: none;
+  }
+
+  ul.secondary li:hover > a{
+    color: #000;
+  }
+
+  ul.secondary li:hover a {
+    background: none;
+    color: #8B8B8B;
+    text-shadow: 1px 1px #000;
+  }
+
+  ul.secondary li:hover ul {
+    display: block;
+    background: #272727;
+    color: #fff;
+  }
+
+
+
 }
